@@ -1,0 +1,18 @@
+<div class="pokemon-view">
+  <div class="container-form">
+    <form (submit)="submitPokemon($event)">
+      <p class="details-header">Pokemon Details Page</p>
+    </form>
+  </div>
+  <div class="section group">
+    <div class="col span_1_of_2">
+      <app-pokemon-side [pokemon]="pokemon"></app-pokemon-side>
+    </div>
+    <div class="col span_1_of_2">
+      <app-pokemon-moves [pokemon]="pokemon"></app-pokemon-moves>
+    </div>
+  </div>
+  <a [routerLink]="['/']" class="add-detail">
+    <i class="fas fa-chevron-circle-left fa-4x"></i>
+  </a>
+</div>

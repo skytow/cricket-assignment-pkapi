@@ -1,0 +1,15 @@
+<div class="pokemon-view">
+  <div class="container-header">
+    <p>Cricket Pokemon Assignment</p>
+  </div>
+  <div class="grid" *ngIf="pokemon">
+    <div class="column" *ngFor="let item of pokemon" [routerLink]="['/detail', item?.name]">
+      <p>{{ (item?.id > 10 ? '#0' : '#00') + item?.id }} - {{ item?.name }}</p>
+      <img [src]="item?.imageFront"/>
+      <img [src]="item?.imageBack"/>
+    </div>
+  </div>
+  <div class="container-button">
+    <button class="button-style" (click)="onSubmit()">Load More</button>
+  </div>
+</div>
